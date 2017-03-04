@@ -1,0 +1,11 @@
+
+version: '2'
+
+services:
+  netcore-rc4-nancy-api:
+    image: netcore-rc4-nancy-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
