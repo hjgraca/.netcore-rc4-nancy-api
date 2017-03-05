@@ -2,7 +2,13 @@
 
 Use Postman or similar to call the api, does not work on the browser.
 
-Azure Commands
+# dotnet commands
+
+dotnet new xunit --name myapi.tests
+
+dotnet sln add ./tests/myapi.tests/myapi.tests.csproj
+
+# Azure Commands
 
 azure appserviceplan create --name myapplinuxsp --location "West Europe" --resource-group Default-Web-NorthEurope  --sku F1 --islinux true
 

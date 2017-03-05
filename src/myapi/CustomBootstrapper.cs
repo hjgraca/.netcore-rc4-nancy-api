@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Nancy;
 using Nancy.Configuration;
 using Nancy.TinyIoc;
+using myapi.Services;
 
 namespace myapi
 {
@@ -25,7 +26,7 @@ namespace myapi
         {
             base.ConfigureApplicationContainer(container);
             
-            container.Register(_serviceProvider.GetService<ILoggerFactory>());
+            container.Register(_serviceProvider.GetService<ILogger<IIpsumService>>());
         }
     }
 }

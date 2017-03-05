@@ -16,12 +16,13 @@ namespace myapi.Services
 
     public class IpsumService : IIpsumService
     {
-        public static HttpClient ClClient = new HttpClient();
+        public readonly HttpClient _httpClient;
         private ILogger<IIpsumService> _logger;
 
-        public IpsumService(ILoggerFactory  loggerFactory)
+        public IpsumService(HttpClient httpClient, ILogger<IIpsumService> logger)
         {
-            _logger = loggerFactory.CreateLogger<IpsumService>();
+            _httpClient = httpClient;
+            _logger = logger;
             _logger.LogWarning("Service created");
         }
 
@@ -31,7 +32,7 @@ namespace myapi.Services
 
             var message = new IpsumMessage();
             // Post the message
-            message.Body = await ClClient.GetStringAsync(
+            message.Body = await _httpClient.GetStringAsync(
                 $"https://baconipsum.com/api/?type=meat-and-filler");
 
             return message;
