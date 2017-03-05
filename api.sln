@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "myapi", "myapi\myapi.csproj", "{BEEE16E5-8622-44AB-A0DE-74666EB084F0}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "myapi", "src\myapi\myapi.csproj", "{BEEE16E5-8622-44AB-A0DE-74666EB084F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
