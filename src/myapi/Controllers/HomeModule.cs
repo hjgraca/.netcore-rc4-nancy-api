@@ -18,7 +18,7 @@ namespace myapi.Controllers
         {
             var valid = this.Validate(person);
             if(!valid.IsValid){
-                return new Person {Name = "Don't know Hello :)"};
+                return new Person {Name = "Don't know Hello"};
             }
 
             return person;

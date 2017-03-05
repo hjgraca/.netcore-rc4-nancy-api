@@ -21,7 +21,7 @@ namespace myapi.tests
         }
 
         [Fact]
-        public void Test1()
+        public async Task ShouldReturnValue()
         {
             //Arrange
             _fakeHttpMessageHandler.Setup(f => f.Send(It.IsAny<HttpRequestMessage>())).Returns(new HttpResponseMessage
@@ -33,7 +33,7 @@ namespace myapi.tests
             var service = new IpsumService(_httpClient, new Mock<ILogger<IIpsumService>>().Object);
             
             // Act
-            var result = service.GenerateAsync().Result;
+            var result = await service.GenerateAsync();
 
             //Assert
             Assert.NotNull(result);

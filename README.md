@@ -8,6 +8,8 @@ dotnet new xunit --name myapi.tests
 
 dotnet sln add ./tests/myapi.tests/myapi.tests.csproj
 
+ASPNETCORE_ENVIRONMENT=Development dotnet run
+
 # Azure Commands
 
 azure appserviceplan create --name myapplinuxsp --location "West Europe" --resource-group Default-Web-NorthEurope  --sku F1 --islinux true
